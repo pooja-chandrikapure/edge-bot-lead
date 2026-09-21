@@ -73,27 +73,31 @@
       </header>
 
       <section class="benefit-list space-y-2.5 mb-6" aria-label="Key Benefits">
-        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-3 py-3.5">
-          <h3 class="benefit-text text-sm font-bold text-white text-center">
-            <span aria-hidden="true" class="mr-1.5">✅</span>Target daily 1%
+        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-4 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-left flex items-start gap-2.5">
+            <span aria-hidden="true" class="shrink-0">✅</span>
+            <span class="flex-1 min-w-0">Target daily 1%</span>
           </h3>
         </div>
 
-        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-3 py-3.5">
-          <h3 class="benefit-text text-sm font-bold text-white text-center">
-            <span aria-hidden="true" class="mr-1.5">✅</span>ITC-based market structure
+        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-4 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-left flex items-start gap-2.5">
+            <span aria-hidden="true" class="shrink-0">✅</span>
+            <span class="flex-1 min-w-0">ITC-based market structure</span>
           </h3>
         </div>
 
-        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-3 py-3.5">
-          <h3 class="benefit-text text-sm font-bold text-white text-center">
-            <span aria-hidden="true" class="mr-1.5">✅</span>Liquidity analysis
+        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-4 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-left flex items-start gap-2.5">
+            <span aria-hidden="true" class="shrink-0">✅</span>
+            <span class="flex-1 min-w-0">Liquidity analysis</span>
           </h3>
         </div>
 
-        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-3 py-3.5">
-          <h3 class="benefit-text text-sm font-bold text-white text-center">
-            <span aria-hidden="true" class="mr-1.5">✅</span>Volatility data and dynamic risk management
+        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-4 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-left flex items-start gap-2.5">
+            <span aria-hidden="true" class="shrink-0">✅</span>
+            <span class="flex-1 min-w-0">Volatility data and dynamic risk management</span>
           </h3>
         </div>
       </section>
@@ -241,11 +245,14 @@ const patternIcons = ['📊', '💰', '📈', '🎯', '⚡', '💹', '📋', '�
     margin-bottom: 16px;
   }
 
-  .benefit-card { padding: 10px 12px; }
+  .benefit-card { padding: 10px 14px; }
 
   .benefit-text {
-    font-size: clamp(0.8rem, 3.6vw, 0.9rem);
-  }
+  line-height: 1.4;
+  text-align: left;
+  text-wrap: pretty;       /* avoids a single orphan word on the last line */
+  overflow-wrap: anywhere; /* prevents overflow on very narrow screens */
+}
 
   .cta-area > p { margin-bottom: 8px; }
 
