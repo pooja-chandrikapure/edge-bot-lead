@@ -1,5 +1,5 @@
 <template>
-  <div class="landing-page min-h-screen bg-[#000000] text-slate-100 relative overflow-hidden flex flex-col items-center justify-center p-2 sm:p-2 lg:p-2">
+  <div class="landing-page min-h-screen bg-[#000000] text-slate-100 relative overflow-x-hidden flex flex-col items-center justify-center p-3">
     
     <!-- Ambient Dynamic Lighting & Radar Background -->
     <div class="pointer-events-none absolute inset-0 overflow-hidden">
@@ -26,7 +26,7 @@
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-gradient-to-r from-transparent via-[#A7D129] to-transparent"></div>
 
       <!-- Avatar & Brand Hero Section -->
-      <header class="brand-header flex flex-col items-center text-center">
+      <header class="brand-header flex flex-col items-center text-center mb-5">
         
         <!-- Profile Circle with Concentric Radar Wave Effect -->
         <div class="profile-link relative mb-2 group cursor-pointer" @click="redirectToTg" title="Click to join Telegram">
@@ -61,7 +61,7 @@
           Built for XAUU💲D
         </p>
 
-        <div class="social-proof w-full gap-2 py-3 px-4 rounded-2xl">
+        <div class="social-proof w-full flex justify-center gap-2 py-3 px-4 rounded-2xl">
           <div class="flex flex-col items-center">
             <div class="flex items-center gap-1.5">
               <span class="text-xl sm:text-2xl font-extrabold text-white font-heading">2245+</span>
@@ -73,32 +73,29 @@
       </header>
 
       <section class="benefit-list space-y-2.5 mb-6" aria-label="Key Benefits">
-        <div class="flex benefit-card glass-card glass-card-hover rounded-xl p-3.5 flex gap-3.5 items-center text-center">
-          <div>
-            <h3 class="text-sm font-bold text-white">✅ Target daily 1%</h3>
-          </div>
+        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-3 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-center">
+            <span aria-hidden="true" class="mr-1.5">✅</span>Target daily 1%
+          </h3>
         </div>
 
-        <div class="flex benefit-card glass-card glass-card-hover rounded-xl p-3.5 flex items-center gap-3.5 text-center">
-          <div>
-            <h3 class="text-sm font-bold text-white">✅ ITC-based market structure</h3>
-          </div>
+        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-3 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-center">
+            <span aria-hidden="true" class="mr-1.5">✅</span>ITC-based market structure
+          </h3>
         </div>
 
-        <div class="flex benefit-card glass-card glass-card-hover rounded-xl p-3.5 flex items-center gap-3.5 text-center">
-          <div>
-            <h3 class="text-sm font-bold text-white">✅ Liquidity analysis</h3>
-          </div>
+        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-3 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-center">
+            <span aria-hidden="true" class="mr-1.5">✅</span>Liquidity analysis
+          </h3>
         </div>
 
-        <div class="flex benefit-card glass-card glass-card-hover rounded-xl p-3.5 flex items-center gap-3.5 text-center">
-          <div>
-            <div class="flex items-center gap-2">
-              <h3 class="text-sm font-bold text-white">✅ Volatility data and dynamic risk management</h3>
-            </div>
-          </div>
+        <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-3 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-center">
+            <span aria-hidden="true" class="mr-1.5">✅</span>Volatility data and dynamic risk management
+          </h3>
         </div>
-
       </section>
 
       <div class="cta-area flex flex-col items-center">
@@ -114,7 +111,7 @@
           @click="redirectToTg"
           class="cta-button relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-[#A7D129] via-[#A7D129] to-[#A7D129] p-0.5 text-white font-bold text-base sm:text-lg shadow-xl shadow-[#A7D129]/30 hover:shadow-[#A7D129]/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group cursor-pointer"
         >
-          <div class="shimmer-sweep pointer-events-none"></div>
+          <div class="shimmer-sweep pointer-events-none absolute inset-0"></div>
 
           <div class="relative z-10 w-full py-4 px-6 rounded-[14px] bg-gradient-to-r from-[#A7D129] to-[#A7D129] group-hover:from-[#BEEA3A] group-hover:to-[#A7D129] flex items-center justify-center gap-3 transition-colors">
             <svg class="w-6 h-6 fill-current text-black transition-transform group-hover:rotate-12 duration-300" viewBox="0 0 24 24">
@@ -130,6 +127,20 @@
         </button>
 
       </div>
+      <!-- Urgency Bar with Dynamic Countdown -->
+        <!-- <div class="mb-1 mt-2 p-3 rounded-2xl bg-gradient-to-r from-red-950/40 via-amber-950/30 to-red-950/40 border border-amber-500/30 flex items-center justify-between"> -->
+          <div class="mb-1 mt-2 p-3 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <!-- <span class="text-lg">🔥</span> -->
+            <!-- <div class="text-center"> -->
+              <p class="text-xs font-semibold text-red-400">Invitation link expires in</p>
+              <!-- <p class="text-[11px] text-amber-300/70">Invitation link refreshed periodically</p> -->
+            <!-- </div> -->
+          </div>
+          <div class="px-3 py-1 rounded-xl bg-black/60 border border-amber-500/40 text-amber-400 font-mono font-bold text-sm tracking-wider shadow-inner">
+            00:{{ countdown < 10 ? '0' + countdown : countdown }}s
+          </div>
+        </div>
 
       <footer class="legal-disclaimer mt-2 pt-4 border-t border-[#A7D129]/20 text-center">
         <p class="text-[11px] text-slate-500 leading-relaxed max-w-sm mx-auto">
@@ -183,16 +194,26 @@ const patternIcons = ['📊', '💰', '📈', '🎯', '⚡', '💹', '📋', '�
 </script>
 
 <style scoped>
+.benefit-text {
+  line-height: 1.4;
+  text-wrap: balance;      /* evens out wrapped lines */
+  overflow-wrap: anywhere; /* prevents overflow on very narrow screens */
+}
+
+.landing-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Small phones and up to large phones */
 @media (max-width: 639px) {
   .landing-page {
-    min-height: 100svh;
-    height: 100svh;
-    padding: 10px 12px;
+    padding: 12px;
   }
 
   .landing-card {
     max-width: 430px;
-    padding: 18px 16px;
+    padding: 20px 16px;
     border-radius: 24px;
   }
 
@@ -204,7 +225,7 @@ const patternIcons = ['📊', '💰', '📈', '🎯', '⚡', '💹', '📋', '�
   }
 
   .brand-title {
-    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
     line-height: 1.1;
     margin-bottom: 6px;
   }
@@ -213,19 +234,17 @@ const patternIcons = ['📊', '💰', '📈', '🎯', '⚡', '💹', '📋', '�
 
   .social-proof {
     padding: 8px 12px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
   }
 
   .benefit-list {
     margin-bottom: 16px;
-    row-gap: 8px;
   }
 
   .benefit-card { padding: 10px 12px; }
 
-  .benefit-card h3 {
-    font-size: 0.875rem;
-    line-height: 1.35;
+  .benefit-text {
+    font-size: clamp(0.8rem, 3.6vw, 0.9rem);
   }
 
   .cta-area > p { margin-bottom: 8px; }
@@ -241,17 +260,10 @@ const patternIcons = ['📊', '💰', '📈', '🎯', '⚡', '💹', '📋', '�
   }
 }
 
-@media (max-width: 639px) and (max-height: 700px) {
-  .landing-card {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-
-  .brand-logo {
-    width: 68px;
-    height: 68px;
-  }
-
-  .legal-disclaimer { display: none; }
+/* Very small / short screens (iPhone SE, small Androids) */
+@media (max-width: 360px) {
+  .landing-card { padding: 16px 12px; }
+  .brand-logo { width: 68px; height: 68px; }
+  .benefit-text { font-size: 0.78rem; }
 }
 </style>
