@@ -1,41 +1,46 @@
 <template>
   <div class="landing-page min-h-screen bg-[#000000] text-slate-100 relative overflow-x-hidden flex flex-col items-center justify-center p-3">
-    
-    <!-- Ambient Dynamic Lighting & Radar Background -->
+    <div class="benefit-card glass-card glass-card-hover rounded-xl w-full px-4 py-3.5">
+          <h3 class="benefit-text text-sm font-bold text-white text-left flex items-start gap-2.5">
+            <!-- <span aria-hidden="true" class="shrink-0">✅</span> -->
+            <span class="flex-1 min-w-0">No page found</span>
+          </h3>
+    </div>
+    <!-- Ambient Dynamic Lighting & Radar Background --cmt
     <div class="pointer-events-none absolute inset-0 overflow-hidden">
-      <!-- Glow Orbs -->
+      Glow Orbs --cmt
       <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#A7D129]/15 rounded-full blur-[140px] animate-pulse-glow"></div>
       <div class="absolute top-1/3 -left-40 w-[450px] h-[450px] bg-[#A7D129]/10 rounded-full blur-[120px]"></div>
       <div class="absolute bottom-10 -right-40 w-[500px] h-[500px] bg-[#A7D129]/10 rounded-full blur-[130px]"></div>
       
-      <!-- Tech Grid Lines -->
+      Tech Grid Lines --cmt
       <div 
         class="absolute inset-0 opacity-[0.035]"
         style="background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px); background-size: 40px 40px;"
       ></div>
 
-      <!-- Radar Concentric Rings in Background -->
+      Radar Concentric Rings in Background  --cmt
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-[#A7D129]/10 pointer-events-none"></div>
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full border border-[#A7D129]/10 pointer-events-none"></div>
     </div>
 
-    <!-- Main Glassmorphic Card Container -->
+    Main Glassmorphic Card Container --cmt
     <main class="landing-card relative z-10 w-full max-w-lg rounded-3xl bg-[#000000]/90 border border-[#A7D129]/25 p-6 sm:p-8 backdrop-blur-xl shadow-2xl shadow-black/80 transition-all">
       
-      <!-- Top Decorative Accent Bar -->
+      Top Decorative Accent Bar --cmt
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-gradient-to-r from-transparent via-[#A7D129] to-transparent"></div>
 
-      <!-- Avatar & Brand Hero Section -->
+      Avatar & Brand Hero Section --cmt
       <header class="brand-header flex flex-col items-center text-center mb-5">
         
-        <!-- Profile Circle with Concentric Radar Wave Effect -->
+        Profile Circle with Concentric Radar Wave Effect --cmt
         <div class="profile-link relative mb-2 group cursor-pointer" @click="redirectToTg" title="Click to join Telegram">
-          <!-- Animated Outer Ripple Ring -->
+          Animated Outer Ripple Ring --cmt
           <div class="absolute -inset-2 rounded-full border border-[#A7D129]/30 animate-ping opacity-25"></div>
-          <!-- Glowing Radial Backdrop -->
+          Glowing Radial Backdrop --cmt
           <div class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-[#A7D129] via-[#BDEE3A] to-[#A7D129] opacity-70 blur-sm group-hover:opacity-100 transition duration-500"></div>
           
-          <!-- Profile Logo Container -->
+          Profile Logo Container --cmt
           <div class="brand-logo relative w-25 h-25 sm:w-30 sm:h-30 rounded-full bg-black border-2 border-[#A7D129]/60 overflow-hidden flex items-center justify-center shadow-xl group-hover:scale-[1.02] transition-transform duration-300">
             <img 
               src="/edge-bot-logo.jpeg" 
@@ -45,7 +50,7 @@
             />
           </div>
 
-          <!-- Verified Checkmark Badge -->
+          Verified Checkmark Badge --cmt
           <div class="absolute bottom-1 right-1 w-8 h-8 rounded-full bg-[#A7D129] border-2 border-[#000000] flex items-center justify-center text-black shadow-md">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
@@ -131,15 +136,12 @@
         </button>
 
       </div>
-      <!-- Urgency Bar with Dynamic Countdown -->
-        <!-- <div class="mb-1 mt-2 p-3 rounded-2xl bg-gradient-to-r from-red-950/40 via-amber-950/30 to-red-950/40 border border-amber-500/30 flex items-center justify-between"> -->
+      Urgency Bar with Dynamic Countdown --cmt
           <div class="mb-1 mt-2 p-3 flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <!-- <span class="text-lg">🔥</span> -->
-            <!-- <div class="text-center"> -->
+          
               <p class="text-xs font-semibold text-red-400">Invitation link expires in</p>
-              <!-- <p class="text-[11px] text-amber-300/70">Invitation link refreshed periodically</p> -->
-            <!-- </div> -->
+             
           </div>
           <div class="px-3 py-1 rounded-xl bg-black/60 border border-amber-500/40 text-amber-400 font-mono font-bold text-sm tracking-wider shadow-inner">
             00:{{ countdown < 10 ? '0' + countdown : countdown }}s
@@ -154,7 +156,7 @@
         </p>
       </footer>
 
-    </main>
+    </main> -->
 
   </div>
 </template>
@@ -191,7 +193,7 @@ onUnmounted(() => {
 //   window.open('https://tinyurl.com/4728eu7d', '_blank');
 // };
 const redirectToTg = () => {
-    window.open('https://tinyurl.com/4728eu7d', '_blank')
+   // window.open('https://tinyurl.com/4728eu7d', '_blank')
 }
 
 const patternIcons = ['📊', '💰', '📈', '🎯', '⚡', '💹', '📋', '⏰', '🔔', '💎'];
